@@ -1,0 +1,22 @@
+{
+    "name": "stephanvock/silex-twig-engine",
+    "description": "TwigEngine service provider for silex",
+    "require": {
+        "symfony/twig-bridge": ">=2.3,<2.7-dev",
+        "silex/silex": "~1.2",
+        "symfony/templating": ">=2.3,<2.7-dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stephan Vock",
+            "email": "stephan.vock@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"Glaubinix\\TwigEngine\\": "src/"}
+    },
+    "require-dev": {
+        "fabpot/php-cs-fixer": "~1.4"
+    }
+}
