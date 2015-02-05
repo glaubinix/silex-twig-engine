@@ -1,5 +1,5 @@
 {
-    "name": "stephanvock/silex-twig-engine",
+    "name": "glaubinix/silex-twig-engine",
     "description": "TwigEngine service provider for silex",
     "require": {
         "symfony/twig-bridge": ">=2.3,<2.7-dev",
