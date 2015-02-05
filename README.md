@@ -1,5 +1,7 @@
 silex-twig-engine
 =================
+Build status: [![Build Status](https://travis-ci.org/glaubinix/silex-twig-engine.png?branch=master)](https://travis-ci.org/glaubinix/silex-twig-engine)
+
 There are a couple of symfony components out there which depend on the EngineInterface rather then depending on a specific template engine.
 This allows users with a different template engine to use the features too -> YaY
 
