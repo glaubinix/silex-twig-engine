@@ -32,3 +32,7 @@ $app->register(new \Glaubinix\TwigEngine\TwigEngineServiceProvider());
 // The engine is now available under the same identifier as in symfony
 $app['templating']->render('template', []);
 ````
+
+License
+-------
+MIT
