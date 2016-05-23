@@ -22,5 +22,4 @@ class TwigEngineServiceProvider implements ServiceProviderInterface
             return new TwigEngine($pimple['twig'], $pimple['glaubinix.twig_engine.template_name_parser']);
         };
     }
-
 }
