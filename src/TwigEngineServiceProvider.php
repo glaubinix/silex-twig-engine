@@ -2,31 +2,25 @@
 
 namespace Glaubinix\TwigEngine;
 
-use Silex\Application;
-use Silex\ServiceProviderInterface;
+use Pimple\Container;
+use Pimple\ServiceProviderInterface;
 use Symfony\Bridge\Twig\TwigEngine;
 use Symfony\Component\Templating\TemplateNameParser;
 
 class TwigEngineServiceProvider implements ServiceProviderInterface
 {
     /**
-     * @param Application $app
+     * @param Container $pimple
      */
-    public function register(Application $app)
+    public function register(Container $pimple)
     {
-        $app['glaubinix.twig_engine.template_name_parser'] = $app->share(function () {
+        $pimple['glaubinix.twig_engine.template_name_parser'] = function () {
             return new TemplateNameParser();
-        });
+        };
 
-        $app['templating'] = $app->share(function (Application $app) {
-            return new TwigEngine($app['twig'], $app['glaubinix.twig_engine.template_name_parser']);
-        });
+        $pimple['templating'] = function (Container $pimple) {
+            return new TwigEngine($pimple['twig'], $pimple['glaubinix.twig_engine.template_name_parser']);
+        };
     }
 
-    /**
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
-     */
-    public function boot(Application $app)
-    {
-    }
 }
