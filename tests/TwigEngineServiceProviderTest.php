@@ -3,11 +3,12 @@
 namespace Glaubinix\Tests\TwigEngine;
 
 use Glaubinix\TwigEngine\TwigEngineServiceProvider;
+use PHPUnit\Framework\TestCase;
 use Pimple\Container;
 use Silex\Provider\TwigServiceProvider;
 use Symfony\Bridge\Twig\TwigEngine;
 
-class TwigEngineServiceProviderTest extends \PHPUnit_Framework_TestCase
+class TwigEngineServiceProviderTest extends TestCase
 {
     public function testCreateTemplating()
     {

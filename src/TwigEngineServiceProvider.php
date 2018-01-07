@@ -9,9 +9,6 @@ use Symfony\Component\Templating\TemplateNameParser;
 
 class TwigEngineServiceProvider implements ServiceProviderInterface
 {
-    /**
-     * @param Container $pimple
-     */
     public function register(Container $pimple)
     {
         $pimple['glaubinix.twig_engine.template_name_parser'] = function () {
